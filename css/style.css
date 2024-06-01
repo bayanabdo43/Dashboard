@@ -1,0 +1,613 @@
+* , ::after ,::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+:root{
+    --colorWhite: #fff;
+    --mainColor :  linear-gradient(rgb(188, 145, 253) ,rgb(124, 37, 254) , rgb(71, 0, 178));
+    --secondColor : linear-gradient(rgb(255, 98, 0) , rgb(255, 154, 41));
+    --blueGradient : linear-gradient(rgb(0, 68, 255) , rgb(41, 91, 255));
+}
+.p-10{
+    padding: 10px;
+}
+     /**********aside**********/
+aside{
+    color: var(--colorWhite);
+    background: var(--mainColor);
+    width: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    ul{
+       list-style: none;
+       padding: 0;
+       display: flex;
+       flex-wrap: wrap;
+
+        li{
+            padding: 1.2rem 0;
+            width: 100%;
+            font-size: 1.2rem;
+        }
+        
+       a{
+        color: var(--colorWhite);
+       }
+    }
+    .secondUl{
+        &::before{
+            content: "";
+            width: 100%;
+            margin: 10px;
+            height: 2px;
+            background-color: var(--colorWhite);
+        }
+        .fa-circle-dot{
+            margin-top: 1.3rem;
+            font-size: 2rem;
+        }
+    }
+}
+     /**********main section**********/
+main{
+    background-color: #edecec;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 60px; 
+}
+     /**********first section**********/
+.sectionOne{
+    width: 100%;
+    .chartOne{
+        width: 100%;
+        background-color: var(--colorWhite);
+        padding: 20px;
+        border-radius: 15px;
+        .lines{
+            padding: 0 5px;
+            position: relative;
+            hr{
+                margin: 20px 0;
+            }
+        }
+        .numLine{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 5px;
+        }
+        svg{
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    .bar{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .barQuery{
+      width: 100%;
+      .target{
+        padding: 0 3px;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 18px;
+        display: block;
+       }
+       h2{
+        margin: 4px;
+       }
+    }
+    .firstBar{
+        background-color: var(--colorWhite);
+        padding: 4px;
+        text-align: center;
+        width: 100%;
+        border-radius: 15px;
+        .target{
+            color: rgb(104, 9, 104);
+        }
+        h3{
+            margin: 3px 0;
+        }
+        .bar1 ,.bar2 ,.bar3,.bar4{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .bar1 div{
+            height: 10px;
+            width: 90%;
+            background-color: rgb(174, 174, 174);
+            border-radius: 5px;
+            display: flex;
+            position: relative;
+            &::after{
+                content: "";
+                width: 40%;
+                height: 10px;
+                background-image: var(--mainColor);
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 100%;
+                border-radius: 5px;
+            }
+        }
+        .bar2 div{
+            height: 10px;
+            width: 90%;
+            background-color: rgb(174, 174, 174);
+            border-radius: 5px;
+            display: flex;
+            position: relative;
+            &::after{
+                content: "";
+                width: 60%;
+                height: 10px;
+                background-image: var(--mainColor);
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 100%;
+                border-radius: 5px;
+            }
+        }
+        .bar3 div{
+            height: 10px;
+            width: 90%;
+            background-color: rgb(174, 174, 174);
+            border-radius: 5px;
+            display: flex;
+            position: relative;
+            &::after{
+                content: "";
+                width: 45%;
+                height: 10px;
+                background-image: var(--mainColor);
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 100%;
+                border-radius: 5px;
+            }
+        }
+        .bar4 div{
+            height: 10px;
+            width: 90%;
+            background-color: rgb(174, 174, 174);
+            border-radius: 5px;
+            display: flex;
+            position: relative;
+            &::after{
+                content: "";
+                width: 80%;
+                height: 10px;
+                background-image: var(--mainColor);
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 100%;
+                border-radius: 5px;
+            }
+        }
+      
+    }
+    .secondBar{
+        background-color: var(--colorWhite);
+        padding: 4px;
+        text-align: center;
+        width: 100%;
+        border-radius: 15px;
+        .target{
+            color: rgb(255, 102, 46);
+        }
+        h3{
+            margin: 3px 0;
+        }
+        .bar1 ,.bar2 ,.bar3,.bar4{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .bar1 div{
+            height: 10px;
+            width: 90%;
+            background-color: rgb(174, 174, 174);
+            border-radius: 5px;
+            display: flex;
+            position: relative;
+            &::after{
+                content: "";
+                width: 37%;
+                height: 10px;
+                background-image: var(--secondColor);
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 100%;
+                border-radius: 5px;
+            }
+        }
+        .bar2 div{
+            height: 10px;
+            width: 90%;
+            background-color: rgb(174, 174, 174);
+            border-radius: 5px;
+            display: flex;
+            position: relative;
+            &::after{
+                content: "";
+                width: 60%;
+                height: 10px;
+                background-image: var(--secondColor);
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 100%;
+                border-radius: 5px;
+            }
+        }
+        .bar3 div{
+            height: 10px;
+            width: 90%;
+            background-color: rgb(174, 174, 174);
+            border-radius: 5px;
+            display: flex;
+            position: relative;
+            &::after{
+                content: "";
+                width: 45%;
+                height: 10px;
+                background-image: var(--secondColor);
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 100%;
+                border-radius: 5px;
+            }
+        }
+        .bar4 div{
+            height: 10px;
+            width: 90%;
+            background-color: rgb(174, 174, 174);
+            border-radius: 5px;
+            display: flex;
+            position: relative;
+            &::after{
+                content: "";
+                width: 25%;
+                height: 10px;
+                background-image: var(--secondColor);
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 100%;
+                border-radius: 5px;
+            }
+        }
+      
+    }
+    .waveChart{
+        background-color: var(--colorWhite);
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        
+        .Scheme{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            hr{
+                width: 90%;
+                margin: 10px 0;
+            }
+            span{
+                width: 10%;
+            }
+        }
+        svg{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 90%;
+        }
+        .numLine{
+            display: flex;
+            width: 90%;
+            margin-left: auto;
+            margin-top: 10px;
+            justify-content: space-between;
+        }
+    }
+    
+}
+     /**********second section**********/
+.sectionTow{
+    width: 100%;
+    .card{
+        align-items: center;
+        justify-content: center;
+        color: var(--colorWhite);
+        display: flex;
+        flex-wrap: wrap;
+        
+        .space{
+            padding:5px;
+            width: 90%;
+        }
+    }
+    .card1{
+       padding: 15px;
+       text-align: center;
+       background-image: var(--mainColor);
+       border-radius: 15px;
+       
+       h3{
+        margin: 3px 0;
+       }
+    }
+    .card2{
+       padding: 15px;
+       text-align: center;
+       background-image: linear-gradient(rgb(89, 147, 254) , rgb(0, 123, 255));
+       border-radius: 15px;
+       
+       h3{
+        margin: 3px 0;
+       }
+    }
+    .card3{
+       padding: 15px;
+       text-align: center;
+       background-image: var(--secondColor);
+       border-radius: 15px;
+       
+       h3{
+        margin: 3px 0;
+       }
+    }
+    .chartLins{
+        background-color: var(--colorWhite);
+        text-align: center;
+        padding: 5px 20px 20px;
+        border-radius: 15px;
+        position: relative;
+        .lines{
+            display: flex;
+            .line{
+                width: 100%;
+                hr{
+                    margin: 15px 0;
+                }
+            }
+            .line1 hr.efect::before{
+                content: "";
+                width: 20px;
+                height: 3px;
+                background-image: var(--mainColor);
+                position: absolute;
+                border-radius: 5px;
+                left: 8%;
+            }
+            .line2 hr.efect::before{
+                content: "";
+                width: 20px;
+                height: 3px;
+                background-image: var(--mainColor);
+                position: absolute;
+                border-radius: 5px;
+                left: 22%;
+            }
+            .line3 hr.efect::before{
+                content: "";
+                width: 20px;
+                height: 3px;
+                background-image: var(--mainColor);
+                position: absolute;
+                border-radius: 5px;
+                left: 34%;
+            }
+            .line4 hr::before{
+                content: "";
+                width: 20px;
+                height: 3px;
+                background-image: var(--mainColor);
+                position: absolute;
+                border-radius: 5px;
+                left: 46%;
+            }
+            .line5 hr::before{
+                content: "";
+                width: 20px;
+                height: 3px;
+                background-image: var(--mainColor);
+                position: absolute;
+                border-radius: 5px;
+                left: 58%;
+            }
+            .line6 hr::before{
+                content: "";
+                width: 20px;
+                height: 3px;
+                background-image: var(--mainColor);
+                position: absolute;
+                border-radius: 5px;
+                left: 70%;
+            }
+            .line7 hr.efect::before{
+                content: "";
+                width: 20px;
+                height: 3px;
+                background-image: var(--mainColor);
+                position: absolute;
+                border-radius: 5px;
+                left: 83%;
+            }
+        }
+        .num{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    .perant {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .Doughnut-Query{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .Doughnut{
+        background-color: var(--colorWhite);
+        border-radius: 15px;
+        width: 90%;
+    }
+    .doughnutOne{
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+    .round-linecap{
+        position: relative;
+        svg{
+            height: 100px;
+        }
+        .one{
+           align-items: center;
+        }
+        .tow{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50% ,0%);
+        }
+        span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% ,-50%);
+        }
+        
+    }
+    .blue{
+        color: #396cee;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .purple{
+        color: #b039ee;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    h4{
+        margin: 3px;
+    }
+}
+
+
+
+
+/*****media query*****/
+
+/*******small*******/
+@media (min-width:640px){
+   
+}
+/*******medium*******/
+@media (min-width:768px) {
+    .sectionOne .chartOne svg{
+        position: absolute;
+        top: -60%;
+    }
+    .sectionOne .barQuery{
+        width: 50%;
+    }
+    .sectionTow{
+        .card .space{
+            width: 50%;
+        }
+        .Doughnut-Query{
+            width: 50%;
+        }
+    }
+    
+}
+/*******large*******/
+@media (min-width:1024px){
+    .sectionOne{
+        width: 50%;
+    }
+    .sectionOne .barQuery{
+        width: 50%;
+    }
+    .sectionOne .chartOne svg{
+        position: absolute;
+        top: -10%;
+    }
+    .sectionTow{
+        width: 50%;
+        .card .space{
+            width: 33.33%;
+        }
+        .Doughnut-Query{
+            width: 50%;
+        }
+    }
+}
+/*******x large*******/
+@media (min-width:1282px) {
+    .sectionOne{
+        width: 50%;
+    }
+    .sectionOne .barQuery{
+        width: 50%;
+    }
+    .sectionOne .chartOne svg{
+        position: absolute;
+        top: -85%;
+    }
+    .sectionTow{
+        width: 50%;
+        .card .space{
+            width: 33.33%;
+        }
+        .Doughnut-Query{
+            width: 50%;
+        }
+    }
+}
+/*******xx large*******/
+@media (min-width:1536px){
+    .sectionOne{
+        width: 50%;
+    }
+    .sectionOne .barQuery{
+        width: 50%;
+    }
+    .sectionOne .chartOne svg{
+        position: absolute;
+        top: -85%;
+    }
+    .sectionTow{
+        width: 50%;
+        .card .space{
+            width: 33.33%;
+        }
+    }
+}
